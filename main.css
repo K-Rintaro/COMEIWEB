@@ -1,0 +1,31 @@
+.font {
+    font-family:
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    sans-serif;
+}
+.chosakuken {
+    font-weight:
+    bold;
+    float: left;
+}
+
+.GitHub {
+    width: 100mm;
+    height: 100mm;
+}
+
+img{
+    margin-left: 1.7cm;
+    width: 80px;
+    height: 80px;
+}
+
+body{
+    margin-left: 2cm;
+}
+
+button{
+    width:100mm;
+    height: 100mm;
+}
