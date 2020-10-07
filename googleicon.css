@@ -1,0 +1,25 @@
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px; 
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    line-height: 1;
+    text-transform: none;
+   
+
+    -webkit-font-smoothing: antialiased;
+  
+    text-rendering: optimizeLegibility;
+   
+ 
+    -moz-osx-font-smoothing: grayscale;
+   
+
+    font-feature-settings: 'liga';
+  }
+
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
