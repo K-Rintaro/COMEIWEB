@@ -6,7 +6,7 @@ COMEIWEB is the revolutionary tool to learn languages.
 COMEI (Excel File) is [here](https://github.com/K-Rintaro/COMEI).
 
 
-**Currently under development. **
+__Currently under development.__
 
 ## LICENSE
 This software is released under the MIT License, see LICENSE.
