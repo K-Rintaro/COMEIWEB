@@ -46,19 +46,19 @@ function Dropify(element, options) {
         allowedFormats: ['portrait', 'square', 'landscape'],
         allowedFileExtensions: ['*'],
         messages: {
-            'default': 'ドラッグ&ドロップかここをクリックしてファイルをアップロードしてください',
-            'replace': 'ドラッグ&ドロップかここをクリックしてファイルを変更できます',
-            'remove':  '削除',
-            'error':   'おっと　エラーが発生しました'
+            'default': 'Drag and drop a file here or click',
+            'replace': 'Drag and drop or click to replace',
+            'remove':  'Remove',
+            'error':   'Ooops, something wrong happended.'
         },
         error: {
-            'fileSize': 'ファイルサイズが大き過ぎます ({{ value }} max).',
-            'minWidth': 'イメージの幅が小さ過ぎます ({{ value }}}px min).',
-            'maxWidth': 'イメージの幅が大き過ぎます ({{ value }}}px max).',
-            'minHeight': 'イメージの高さが小さ過ぎます ({{ value }}}px min).',
-            'maxHeight': 'イメージの高さが大き過ぎます({{ value }}px max).',
-            'imageFormat': '許可されていないフォーマットです({{ value }} only).',
-            'fileExtension': 'このファイルは許可されていません ({{ value }} only).'
+            'fileSize': 'The file size is too big ({{ value }} max).',
+            'minWidth': 'The image width is too small ({{ value }}}px min).',
+            'maxWidth': 'The image width is too big ({{ value }}}px max).',
+            'minHeight': 'The image height is too small ({{ value }}}px min).',
+            'maxHeight': 'The image height is too big ({{ value }}px max).',
+            'imageFormat': 'The image format is not allowed ({{ value }} only).',
+            'fileExtension': 'The file is not allowed ({{ value }} only).'
         },
         tpl: {
             wrap:            '<div class="dropify-wrapper"></div>',
