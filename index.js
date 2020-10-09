@@ -1,24 +1,24 @@
-const outputElement = document.getElementById('output_csv');
+function getCSV(){
+  var req = new XMLHttpRequest(); 
+  req.open("get", "sample.csv", true);
+  req.send(null);
 
-function getCsvData(dataPath) {
- const request = new XMLHttpRequest();
- request.addEventListener('load', (event) => {
-  const response = event.target.responseText;
-  convertArray(response);
- });
- request.open('GET', dataPath, true);
- request.send();
+ 
+  req.onload = function(){
+convertCSVtoArray(req.responseText); 
+  }
 }
 
-function convertArray(data) {
- const dataArray = [];
- const dataString = data.split('n');
- for (let i = 0; i < dataString.length; i++) {
-  dataArray[i] = dataString[i].split(',');
- }
- outputElement.innerHTML = dataArray;
+
+function convertCSVtoArray(str){ 
+  var result = [];
+  var tmp = str.split("\n"); 
+
+  for(var i=0;i<tmp.length;++i){
+      result[i] = tmp[i].split(',');
+  }
+
+  alert(result[1][2]);
 }
 
-getCsvData('./example.csv');
-
-    
+getCSV(); 
