@@ -1,6 +1,6 @@
 function getCSV(){
   var req = new XMLHttpRequest(); 
-  req.open("get", "/sample.csv", true);
+  req.open("get", "https://k-rintaro.github.io/COMEIWEB/sample.csv", true);
   req.send(null);
 
  
