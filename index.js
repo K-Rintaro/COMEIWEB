@@ -1,6 +1,6 @@
 function getCSV(){
   var req = new XMLHttpRequest(); 
-  req.open("get", "sample.csv", true);
+  req.open("get", "/sample.csv", true);
   req.send(null);
 
  
