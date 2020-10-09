@@ -42,13 +42,14 @@
         </div>
             <form>
                 <p>1. Please upload CSV files.</p>
-                <input type="file" class="dropify" name="file">
+                <input type="file" class="dropify" id ="output_csv" name="file">
             </form>
             <script>
                 $(document).ready(function(){
                     $('.dropify').dropify();
                 });
             </script>
+            <input type="button" value="Exec" onclick="getCsvData();convertArray();"/>
     </div>
 </body>
 </html>
