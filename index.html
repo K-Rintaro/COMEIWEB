@@ -51,7 +51,24 @@
                     $('.dropify').dropify();
                 });
             </script>
-            <input type="button" value="HTTP Request" onclick="getCSV();"/>
+        <script>
+window.addEventListener('DOMContentLoaded', ()=>{
+  const convertCSVtoArray=(str)=>{ 
+    const result = [];
+    const tmp = str.split("\n"); 
+    for(var i=0;i<tmp.length;++i){
+      result[i] = tmp[i].split(',');
+    }
+    return result;
+  }
+  document.querySelector('#btn').addEventListener('click', ()=>{
+    const url="sample.csv";
+    fetch(url).then(res=>res.text()).then(txt=>console.log(convertCSVtoArray(txt)[1][2]));
+  });
+});
+
+</script>
+<input type="button" id="btn" value="HTTP Request">
     </div>
 </body>
 </html>
