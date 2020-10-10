@@ -62,7 +62,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
     return result;
   }
   document.querySelector('#btn').addEventListener('click', ()=>{
-    const url="sample.csv";
+    const url="/sample.csv";
     fetch(url).then(res=>res.text()).then(txt=>console.log(convertCSVtoArray(txt)[1][2]));
   });
 });
