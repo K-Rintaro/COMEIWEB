@@ -18,7 +18,7 @@ function convertCSVtoArray(str){
       result[i] = tmp[i].split(',');
   }
 
-  alert(result[1][2]);
+  alert(tmp[i].split(','));
 }
 
 getCSV(); 
