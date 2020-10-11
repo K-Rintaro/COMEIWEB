@@ -50,24 +50,49 @@
                     $('.dropify').dropify();
                 });
             </script>
-        <script>
-window.addEventListener('DOMContentLoaded', ()=>{
-  const convertCSVtoArray=(str)=>{ 
-    const result = [];
-    const tmp = str.split("\n"); 
-    for(var i=0;i<tmp.length;++i){
-      result[i] = tmp[i].split(',');
-    }
-    return result;
-  }
-  document.querySelector('#btn').addEventListener('click', ()=>{
-    const url="/sample.csv";
-    fetch(url).then(res=>res.text()).then(txt=>console.log(convertCSVtoArray(txt)[1][2]));
-  });
-});
+            <script>
+ // 単語の順番をランダムに並べ替える。
+ window.addEventListener('DOMContentLoaded', ()=>{
+              const myfile=document.querySelector('#output_csv');
+              myfile.addEventListener('change',async e=>{
+                var f=e.target.files[0];
+                var fr=new FileReader();
+                var data=await new Promise((resolve)=>{
+                  fr.addEventListener('load',()=>{
+                    const content=fr.result;
+                    const data=content.split(/[\r\n]+/).map(x=>(y=x.split(","),{spelling:y[0],meaning:y[1]}));
+                    resolve(data);
+                  });
+                  fr.readAsText(f) ;
+                });
+                console.log(data);
+                data.sort (function (a, b) {return Math.floor (Math.random () * 3) - 1 ;}) ;
+              });
+            });
+ 
+ function Start ()
+{
+ if (data.length==0)
+ {window .alert ("すでに全ての出題が終了しています。") ; return ;}
+ 
+ while (true)
+ {
+var word = data.shift () ;
+ 
+window .alert ("問題: " + word.spelling) ;
+ 
+if (data.length==0)
+ {window .alert ("答え: " + word.meaning + "\n\nこれで全ての出題が終了しました。") ; return ;}
+ 
+if (! window .confirm ("答え: " + word.meaning + "\n\n次へ→[OK] ／ 終了→[キャンセル]")) return ;
+}
+}
+ </script>
+</head>
+<body>
+<form> <button onclick="Start () ;">スタート</button> </form>
+</body>
 
-</script>
-<input type="button" id="btn" value="HTTP Request">
     </div>
 </body>
 </html>
