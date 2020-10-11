@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="description" content="The best tool for learning languages on the web." />
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<link rel="stylesheet" type="text/css" href="googleicon.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="dropify.css">
+<link rel="stylesheet" type="text/css" href="roboto.css" >
+<link rel="icon" href="comeilogo.ico">
+<script src="dropify.js"></script>
+<meta charset="utf-8">
+<link rel="stylesheet" href="main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COMEI</title>
+</head>
+<body>
+    <div class="font">
+        <div class="heyyou">
+            <ui>
+                <li>
+                    <h1>COMEIWEB</h1> 
+                </li>
+                <li>
+                    <h3>The best tool for learning languages on the web.</h3>
+                </li>
+            </ui>
+        </div>
+        <div class="chosakuken">
+            <p>©️2020 Rintaro Kobayashi</p>
+            <div class="GitHub">
+                <a href="https://github.com/K-Rintaro" target= "_blank" rel="noopener"> <img src="GitHub.png" alt="GitHubpage" title="GitHubpage"> </a>
+            </div>
+        </div>
+        <div class="kaihatsuchu">
+            <div class="blinking">
+                <span class="material-icons">
+                    error
+                </span>
+            </div>
+            <p>"right"　column is　answer and  "left" column is question.</p>
+        </div>
+            <form>
+                <p>1. Please upload CSV files.</p>
+                <input type="file" class="dropify" id ="output_csv" name="file" accept=".csv">
+            </form>
+            <script>
+                $(document).ready(function(){
+                    $('.dropify').dropify();
+                });
+            </script>
+            <div class="next">
+                <p>2. "NEXT" button </p>
+                <span class="material-icons">
+                    forward
+                </span>
+                <p>Next question.</p>
+            </div>
+            <div class="answer">
+                <p>"ANSWER" button</p>
+                <span class="material-icons">
+                    forward
+                </span>
+                <p>Check the answer.</p>
+            </div>
+            <script>
+ let data;
+ window.addEventListener('DOMContentLoaded', ()=>{
+              const myfile=document.querySelector('#output_csv');
+              myfile.addEventListener('change',async e=>{
+                var f=e.target.files[0];
+                var fr=new FileReader();
+                var aaa =await new Promise((resolve)=>{
+                  fr.addEventListener('load',()=>{
+                    const content=fr.result;
+                    data=content.split(/[\r\n]+/).map(x=>(y=x.split(","),{spelling:y[0],meaning:y[1]}));
+                    resolve(aaa);
+                  });
+                  fr.readAsText(f) ;
+                });
+                data.sort (function (a, b) {return Math.floor (Math.random () * 3) - 1 ;}) ;
+                console.log(data);
+              });
+            });
+            let word;
+            function Next() {
+            word = data.shift();
+            document.getElementById("question").value = word.spelling;
+            document.getElementById("answer").value = " "
+            if(data.length == 0){
+                window.alert("The next will be the last")
+            }
+        }
+        function Answer() {
+            document.getElementById("answer").value = word.meaning
+        }
+</script>
+<div class="textareas">
+    <div class= "questionareas">
+        <input id="question">
+    </div>
+    <div class= "answerareas">
+        <input id="answer">
+    </div>
+</div>
+<div class="buttons">
+    <div class="nextbutton">
+        <button onclick="Next();">
+            NEXT
+        </button>
+    </div>
+    <div class="answerbutton">
+        <button onclick="Answer()">
+            ANSWER
+            </button>
+    </div>
+</div>
+</html>
