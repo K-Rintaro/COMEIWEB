@@ -9,6 +9,7 @@
     font-weight:
     bold;
     float: left;
+    height: 10cm
 }
 
 .GitHub {
@@ -43,6 +44,19 @@ h1 {
     ;
 }
 
+.next {
+    display: flex; 
+}
+
+.answer {
+    display: flex;
+    margin-left: 15px;
+}
+
+.material-icons{
+    line-height: 2; 
+}
+
 h3 {
     top: 120px;
     text-align:center;
@@ -54,6 +68,13 @@ h3 {
 .kaihatsuchu{
     display: flex;
     font-weight: bold;
+}
+.buttons{
+    display:flex;
+}
+
+.nextbutton{
+    margin-right: 100px;
 }
 
 li {
@@ -69,6 +90,34 @@ ul {
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    margin-top: 1px;
+    border: 2px solid #cecccc;
+}
+
+.nextbutton{
+    margin-left: 10cm;
+}
+
+.answerbutton{
+    margin-left: 5cm;
+}
+
+input {
+    background-color: transparent;
+    border:2px solid black;
+    width: 30cm;
+    height: 8cm;
+    display: inline-block;
+    margin-bottom: 2mm;
+    text-align:center;
+    font-size: 80px;
+    margin-left: 2cm;
 }
 
 .blinking{
@@ -88,3 +137,6 @@ ul {
         0% {opacity:0;}
         100% {opacity:1;}
     }
+    
+
+
