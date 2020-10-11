@@ -51,25 +51,24 @@
                 });
             </script>
             <script>
- // 単語の順番をランダムに並べ替える。
+ let data;
  window.addEventListener('DOMContentLoaded', ()=>{
               const myfile=document.querySelector('#output_csv');
               myfile.addEventListener('change',async e=>{
                 var f=e.target.files[0];
                 var fr=new FileReader();
-                var data=await new Promise((resolve)=>{
+                var aaa =await new Promise((resolve)=>{
                   fr.addEventListener('load',()=>{
                     const content=fr.result;
-                    const data=content.split(/[\r\n]+/).map(x=>(y=x.split(","),{spelling:y[0],meaning:y[1]}));
-                    resolve(data);
+                    data=content.split(/[\r\n]+/).map(x=>(y=x.split(","),{spelling:y[0],meaning:y[1]}));
+                    resolve(aaa);
                   });
                   fr.readAsText(f) ;
                 });
-                console.log(data);
                 data.sort (function (a, b) {return Math.floor (Math.random () * 3) - 1 ;}) ;
+                console.log(data);
               });
             });
- 
  function Start ()
 {
  if (data.length==0)
