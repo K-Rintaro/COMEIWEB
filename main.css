@@ -106,7 +106,11 @@ button {
 }
 
 .answerbutton{
-    margin-left: 5cm;
+    margin-left: 1cm;
+}
+
+.speakbutton{
+    margin-left: 3cm;
 }
 
 input {
@@ -139,3 +143,13 @@ input {
         0% {opacity:0;}
         100% {opacity:1;}
     }
+
+select{
+        background-color: transparent;
+}
+
+.language {
+    display: flex;
+}
+
+
