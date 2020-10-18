@@ -98,6 +98,7 @@ button {
     background-color: transparent;
     margin-top: 1px;
     border: 2px solid #cecccc;
+    border-radius: 15mm;
 }
 
 .nextbutton{
@@ -112,12 +113,13 @@ input {
     background-color: transparent;
     border:2px solid black;
     width: 30cm;
-    height: 8cm;
+    height: 15cm;
     display: inline-block;
     margin-bottom: 2mm;
     text-align:center;
-    font-size: 80px;
+    font-size: 1.5cm;
     margin-left: 2cm;
+
 }
 
 .blinking{
@@ -137,6 +139,3 @@ input {
         0% {opacity:0;}
         100% {opacity:1;}
     }
-    
-
-
