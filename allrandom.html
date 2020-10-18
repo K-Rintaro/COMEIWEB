@@ -136,6 +136,59 @@
             ANSWER
         </button>
     </div>
+    <div class="speakbutton">
+        <button id="speak-btn">SPEAK</button>
+    </div>
 </div>
+<script>
+// Fetch the list of voices and populate the voice options.
+function loadVoices() {
+  // Fetch the available voices in English US.
+  let voices = speechSynthesis.getVoices();
+  $("#voice-names").empty();
+  voices.forEach(function(voice, i) {
+    const $option = $("<option>");
+    $option.val(voice.name);
+    $option.text(voice.name + " (" + voice.lang + ")");
+    $option.prop("selected", voice.name === "Google US English");
+    $("#voice-names").append($option);
+  });
+}
+
+// Execute loadVoices.
+loadVoices();
+
+// Chrome loads voices asynchronously.
+window.speechSynthesis.onvoiceschanged = function(e) {
+  loadVoices();
+};
+
+const uttr = new SpeechSynthesisUtterance();
+
+// Set up an event listener for when the 'speak' button is clicked.
+// Create a new utterance for the specified text and add it to the queue.
+$("#speak-btn").click(function() {
+  uttr.text = $("#question").val();
+  if ($("#voice-names").val()) {
+    uttr.voice = speechSynthesis
+      .getVoices()
+      .filter(voice => voice.name == $("#voice-names").val())[0];
+  }
+  speechSynthesis.speak(uttr);
+  uttr.onend = function() {
+  };
+});
+shortcut.add("s",function() {
+    uttr.text = $("#question").val();
+  if ($("#voice-names").val()) {
+    uttr.voice = speechSynthesis
+      .getVoices()
+      .filter(voice => voice.name == $("#voice-names").val())[0];
+  }
+  speechSynthesis.speak(uttr);
+  uttr.onend = function() {
+  };
+        });
+</script>
         </body>
 </html>
