@@ -18,80 +18,97 @@
 <body>
     <div class="font">
         <div class="heyyou">
-            <ui>
+            <ul>
                 <li>
                     <h1>COMEIWEB</h1> 
                 </li>
                 <li>
                     <h3>The best tool for learning languages on the web.</h3>
                 </li>
-            </ui>
+                <li>
+                    <p>©️2020 Rintaro Kobayashi</p>
+                </li>
+                <li>
+                    <a href="https://github.com/K-Rintaro" target= "_blank" rel="noopener"> <img src="GitHub.png" alt="GitHubpage" title="GitHubpage"> </a>
+                </li>
+                <div class="prepare">
+                    <li>
+                        <h4>Please prepare the CSV File. We recommend Google Sheets.</h4>
+                    </li>
+                    <li>
+                        <h4>,(Halfwidth_comma) " "(Halfwidth_quotation marks) are not supported. Please use fullwidth version.
+                    </li>
+                </div>
+            </ul>
+    <div class="menus">
+        <div class="menu1">
+            <ul>
+                <li>
+                    <h2>
+                        ALL RANDOM Ver.
+                    </h2>
+                </li>
+                <li>
+                    <img src="allrandom.png">
+                </li>
+                <li>
+                    <a href="allrandom.html">
+                        <h2>HERE</h2>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <div class="chosakuken">
-            <p>©️2020 Rintaro Kobayashi</p>
-            <div class="GitHub">
-                <a href="https://github.com/K-Rintaro" target= "_blank" rel="noopener"> <img src="GitHub.png" alt="GitHub" title="GitHub"> </a>
-            </div>
+        <div class="menu2">
+            <ul>
+                <li>
+                    <h2>
+                        Right Question Ver.
+                    </h2>
+                </li>
+                <li>
+                    <img src="rightquestion.png">
+                </li>
+                <li>
+                    <a href="rightquestion.html">
+                        <h2>HERE</h2>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <div class="kaihatsuchu">
-            <div class="blinking">
-                <span class="material-icons">
-                    error
-                </span>
-            </div>
-            <p>Currently under development. Many features are not available at this time.</p>
+        <div class="menu3">
+            <ul>
+                <li>
+                    <h2>
+                        Left Question Ver.
+                    </h2>
+                </li>
+                <li>
+                    <img src="leftquestion.png">
+                </li>
+                <li>
+                    <a href="leftquestion.html">
+                        <h2>HERE</h2>
+                    </a>
+                </li>
+            </ul>
         </div>
-            <form>
-                <p>1. Please upload CSV files.</p>
-                <input type="file" class="dropify" id ="output_csv" name="file">
-            </form>
-            <script>
-                $(document).ready(function(){
-                    $('.dropify').dropify();
-                });
-            </script>
-            <script>
- let data;
- window.addEventListener('DOMContentLoaded', ()=>{
-              const myfile=document.querySelector('#output_csv');
-              myfile.addEventListener('change',async e=>{
-                var f=e.target.files[0];
-                var fr=new FileReader();
-                var aaa =await new Promise((resolve)=>{
-                  fr.addEventListener('load',()=>{
-                    const content=fr.result;
-                    data=content.split(/[\r\n]+/).map(x=>(y=x.split(","),{spelling:y[0],meaning:y[1]}));
-                    resolve(aaa);
-                  });
-                  fr.readAsText(f) ;
-                });
-                data.sort (function (a, b) {return Math.floor (Math.random () * 3) - 1 ;}) ;
-                console.log(data);
-              });
-            });
- function Start ()
-{
- if (data.length==0)
- {window .alert ("すでに全ての出題が終了しています。") ; return ;}
- 
- while (true)
- {
-var word = data.shift () ;
- 
-window .alert ("問題: " + word.spelling) ;
- 
-if (data.length==0)
- {window .alert ("答え: " + word.meaning + "\n\nこれで全ての出題が終了しました。") ; return ;}
- 
-if (! window .confirm ("答え: " + word.meaning + "\n\n次へ→[OK] ／ 終了→[キャンセル]")) return ;
-}
-}
- </script>
-</head>
-<body>
-<form> <button onclick="Start () ;">スタート</button> </form>
-</body>
-
     </div>
-</body>
+    <div class="privacy">
+        <ul>
+            <li>
+                <span class="material-icons">
+                    privacy_tip
+                </span>
+                <a href="privacyisimportant.html"><p>Privacy Policy</p></a>
+            </li>
+            <li>
+                <span class="material-icons">
+                    email
+                </span>
+                <p>git.rintaro[a]gmail.com</p>
+            </li>
+        </ul>
+    </div>
+    </div>
+        </body>
 </html>
