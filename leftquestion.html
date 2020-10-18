@@ -17,19 +17,19 @@
 <body>
     <div class="font">
         <div class="heyyou">
-            <ui>
+            <ul>
                 <li>
                     <h1>COMEIWEB</h1> 
                 </li>
                 <li>
                     <h3>The best tool for learning languages on the web.</h3>
                 </li>
-            </ui>
+            </ul>
         </div>
         <div class="chosakuken">
             <p>©️2020 Rintaro Kobayashi</p>
             <div class="GitHub">
-                <a href="https://github.com/K-Rintaro" target= "_blank" rel="noopener"> <img src="GitHub.png" alt="GitHubpage" title="GitHubpage"> </a>
+                <a href="https://github.com/K-Rintaro" target= "_blank" rel="noopener"> <img src="GitHub.png" alt="GitHubpage" title="GitHubpage"> </a>
             </div>
         </div>
         <div class="kaihatsuchu">
@@ -38,7 +38,7 @@
                     error
                 </span>
             </div>
-            <p>"right" column is answer and "left" column is question.</p>
+            <p>"right"　column is　answer and  "left" column is question.</p>
         </div>
             <form>
                 <p>1. Please upload CSV files.</p>
@@ -50,14 +50,14 @@
                 });
             </script>
             <div class="next">
-                <p>2. "NEXT" button </p>
+                <p>2. "NEXT" button or "w" key</p>
                 <span class="material-icons">
                     forward
                 </span>
                 <p>Next question.</p>
             </div>
             <div class="answer">
-                <p>"ANSWER" button</p>
+                <p>"ANSWER" button or "a" key</p>
                 <span class="material-icons">
                     forward
                 </span>
@@ -84,23 +84,37 @@
             });
             let word;
             function Next() {
+            var obj = document.getElementById("question");
+  　　　　　　obj.style.color = '#000000';
             word = data.shift();
             document.getElementById("question").value = word.spelling;
-            document.getElementById("answer").value = " "
             if(data.length == 0){
                 window.alert("The next will be the last")
             }
         }
         function Answer() {
-            document.getElementById("answer").value = word.meaning
+            var obj = document.getElementById("question");
+  　　　　　　obj.style.color = '#ff0000';
+            document.getElementById("question").value = word.meaning
         }
+        shortcut.add("w",function() {
+            var obj = document.getElementById("question");
+  　　　　　　obj.style.color = '#000000';
+            word = data.shift();
+            document.getElementById("question").value = word.spelling;
+            if(data.length == 0){
+                window.alert("The next will be the last")
+            }
+        });
+        shortcut.add("a",function() {
+            var obj = document.getElementById("question");
+  　　　　　　obj.style.color = '#ff0000';
+            document.getElementById("question").value = word.meaning
+        });
 </script>
 <div class="textareas">
     <div class= "questionareas">
         <input id="question">
-    </div>
-    <div class= "answerareas">
-        <input id="answer">
     </div>
 </div>
 <div class="buttons">
@@ -110,9 +124,10 @@
         </button>
     </div>
     <div class="answerbutton">
-        <button onclick="Answer()">
+        <button id="answerbutton" onclick="Answer()">
             ANSWER
-            </button>
+        </button>
     </div>
 </div>
+        </body>
 </html>
