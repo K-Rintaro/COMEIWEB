@@ -242,3 +242,9 @@ p {
 h2{
     color: black;
 }
+
+.prepare p{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 50px;
+}
