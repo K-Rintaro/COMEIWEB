@@ -8,6 +8,8 @@
 
 The best tool for learning languages on the web.
 
+Please visit [https://k-rintaro.github.io/COMEIWEB](https://k-rintaro.github.io/COMEIWEB)
+
 I released application version. Please check [newest release](https://github.com/K-Rintaro/COMEIWEB/releases/tag/v1.0.0)!!
 
 ## WHAT IS THIS
