@@ -8,6 +8,8 @@
 
 The best tool for learning languages on the web.
 
+I released application version. Please check [newest release](https://github.com/K-Rintaro/COMEIWEB/releases/tag/v1.0.0)!!
+
 ## WHAT IS THIS
 COMEIWEB is the revolutionary tool to learn languages.
 
