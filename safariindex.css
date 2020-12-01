@@ -1,0 +1,250 @@
+.font {
+    font-family:
+    "Roboto",
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    sans-serif;
+}
+.chosakuken {
+    font-weight:
+    bold;
+    float: left;
+    height: 10cm
+}
+
+.GitHub {
+    width: 100mm;
+    height: 100mm;
+}
+
+.heyyou img{
+    margin-left: 0.5cm;
+    width: 80px;
+    height: 80px;
+}
+
+button{
+    width:100mm;
+    height: 100mm;
+}
+
+body {
+    background-image: linear-gradient( 89.9deg,  rgba(178,253,238,0.96) -8.1%, rgba(207,244,254,1) 26.3%, rgba(207,244,254,0.48) 47.5%, rgba(254,219,243,0.63) 61.5%, rgba(254,219,243,1) 78.7%, rgba(254,207,210,1) 109.2% );
+    margin-left: 2cm;
+}
+
+h1 {
+    font-size: 125px;
+    font-weight: bolder;
+    margin-bottom: 0px;
+    text-align:center;
+    margin:0 auto;
+    margin-top: 3cm;
+    border-bottom: 3px solid black
+    ;
+}
+
+.next {
+    display: flex; 
+}
+
+.answer {
+    display: flex;
+    margin-left: 15px;
+}
+
+.material-icons{
+    line-height: 2; 
+}
+
+h3 {
+    top: 120px;
+    text-align:center;
+    margin:0 auto;
+    margin-bottom: 1cm;
+    font-size: 30px;
+}
+
+.kaihatsuchu{
+    display: flex;
+    font-weight: bold;
+}
+.buttons{
+    display:flex;
+}
+
+.nextbutton{
+    margin-right: 100px;
+}
+
+li {
+    display: flex;
+    -webkit-box-align: center; 
+    -moz-box-align: center;    
+    -o-box-align: center;     
+    -ms-box-align: center;     
+    box-align: center;  
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    margin-top: 1px;
+    border: 2px solid #cecccc;
+}
+
+.nextbutton{
+    margin-left: 10cm;
+}
+
+.answerbutton{
+    margin-left: 5cm;
+}
+
+input {
+    background-color: transparent;
+    border:2px solid black;
+    width: 30cm;
+    height: 8cm;
+    display: inline-block;
+    margin-bottom: 2mm;
+    text-align:center;
+    font-size: 80px;
+    margin-left: 2cm;
+}
+
+.blinking{
+  -webkit-animation:blink 1.5s ease-in-out infinite alternate;
+  -moz-animation:blink 1.5s ease-in-out infinite alternate;
+  animation:blink 1.5s ease-in-out infinite alternate;
+    }
+    @-webkit-keyframes blink{
+        0% {opacity:0;}
+        100% {opacity:1;}
+    }
+    @-moz-keyframes blink{
+        0% {opacity:0;}
+        100% {opacity:1;}
+    }
+    @keyframes blink{
+        0% {opacity:0;}
+        100% {opacity:1;}
+    }
+
+.menu1{
+    border: 3px solid #b8b5b5;
+    width: 10cm;
+    height: 11cm;
+    border-radius: 1cm;
+    margin-right: 1cm
+}
+
+.menu1 h2{
+  margin-left: -1cm;
+}
+
+.menu1 img{
+    width: 6cm;
+    height: 7.5cm;
+    margin-left: -1cm
+}
+
+.menu2{
+    border: 3px solid #b8b5b5;
+    width: 10cm;
+    height: 11cm;
+    border-radius: 1cm;
+    margin-right: 1cm;
+}
+
+.menu2 h2{
+  margin-left: -1cm;
+}
+
+.menu2 img{
+    width: 6cm;
+    height: 7.5cm;
+    margin-left: -1cm
+}
+
+.menu3{
+    border: 3px solid #b8b5b5;
+    width: 10cm;
+    height: 11cm;
+    border-radius: 1cm;
+}
+
+.menu3 h2{
+  margin-left: -1cm;
+}
+
+.menu3 img{
+    width: 6cm;
+    height: 7.5cm;
+    margin-left: -1cm
+}
+
+.menus {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 10%
+}
+
+
+@keyframes my-fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+  
+.menus {  
+    animation-name:     my-fade-in;
+    animation-duration: 3s;
+}
+
+
+.prepare {
+    margin-top: 3cm;
+}
+
+.privacytop h2{
+    font-size: 65px;
+}
+
+.effective {
+    font-weight: bolder;
+    border: 1px solid black;
+    width: 20cm;
+    height: 33mm;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.margin {
+    margin-top: 1cm;
+}
+
+p {
+    color: black;
+}
+
+h2{
+    color: black;
+}
+
+.prepare p{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 50px;
+}
