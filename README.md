@@ -10,29 +10,20 @@ The best tool for learning languages on the web.
 
 Please visit [https://k-rintaro.github.io/COMEIWEB](https://k-rintaro.github.io/COMEIWEB)
 
-I released application version. Please check [newest release](https://github.com/K-Rintaro/COMEIWEB/releases/tag/v1.0.0)!!
-
 ## WHAT IS THIS
 COMEIWEB is the revolutionary tool to learn languages.
 
-First, please prepare the CSV file.
-
+First, please prepare the CSV file.\
 You can create it with Google Sheets.
 
-Format(Google Sheets):
-
-Write words onto  "A" column
-
+Format(Google Sheets):\
+Write words onto  "A" column\
 Write paginal translations onto "B" column.
 
-Second, please choose display modes.
-
-"Right Question Ver." → Words of "A" column will be questions and words of "B" column will be answers.
-
-"Left Question Ver." → Words of "B" column will be questions and words of "A" column will be answers.
-
+Second, please choose display modes.\
+"Right Question Ver." → Words of "A" column will be questions and words of "B" column will be answers.\
+"Left Question Ver." → Words of "B" column will be questions and words of "A" column will be answers.\
 "All Random Ver." → Words of "A" column and "B" column will be shuffled.
-
 
 More details, please check [COMEIWEB](https://k-rintaro.github.io/COMEIWEB).
 
